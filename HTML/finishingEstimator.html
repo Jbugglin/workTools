@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, interactive-widget=resizes-content">
+    <link rel="stylesheet" href="../CSS/finishingEstimator.css">
+    <title>Roll Estimator -JB-</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form id="user-input">
+                <!-- Will convert this to a drop-down selection -->
+                <div class="user-input-field">
+                    <label for="totalReadyRolls">Total Rolls Ready:</label>
+                    <input type="number" name="totalReadyRolls" id="totalReadyRolls" min="0">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="seqStart">Starting Sequence #:</label>
+                    <input type="number" name="seqStart" id="seqStart" min="0">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="seqEnd">Ending Sequence #:</label>
+                    <input type="number" name="seqEnd" id="seqEnd" min="0">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="prodVelo"># of Sheets / hr:</label>
+                    <input type="number" name="prodVelo" id="prodVelo" min="0">
+                </div>
+                <br>
+                <!-- Will convert this to a drop-down selection -->
+                <div class="user-input-field">
+                    <label for="numOfGaps"># of Gaps in ready rolls: </label>
+                    <input type="number" name="numOfGaps" id="numOfGaps">
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </form>
+
+            <div id="output">
+                <div id="totalQtyContainer">
+                    <span>Total Quantity: </span>
+                    <div id="quantity">-------</div>
+                </div>
+
+                <div id="quantityRunTime">
+                    <span>Production Run Time: </span>
+                    <div class="runTime">
+                        <div id="prodHours">Hours</div>
+                        <div class="colon">:</div>
+                        <div id="prodMinutes">Minutes</div>
+                    </div>
+                </div>
+
+                <div id="rollChangeTime">
+                    <span>Total Roll Change Time: </span>
+                    <div class="runTime">
+                        <div id="rollChangeHours">Hours</div>
+                        <div class="colon">:</div>
+                        <div id="rollChangeMinutes">Minutes</div>
+                    </div>
+                </div>
+
+                <div id="rollGapTime">
+                    <span>Time To Run Gaps: </span>
+                    <div class="runTime">
+                        <div id="gapHours">Hours</div>
+                        <div class="colon">:</div>
+                        <div id="gapMinutes">Minutes</div>
+                    </div>
+                </div>
+
+                <div id="totalRunTime">
+                    <span>Total Runtime: </span>
+                    <div class="runTime">
+                        <div id="totalHours">Hours</div>
+                        <div class="colon">:</div>
+                        <div id="totalMinutes">Minutes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="../Javascript/finishingEstimator.js"></script>
+</body>
+</html>
