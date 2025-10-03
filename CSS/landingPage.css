@@ -1,0 +1,82 @@
+/* Global Variables */
+:root {
+    /* Color variables */
+
+    /* Spacing variables */
+    --header-margin-top: 2rem;
+    --header-margin-bottom: 3rem;
+    --header-height: 1rem;
+    
+    /* Font sizings */
+    --footer-font-size: 0.75rem;
+}
+
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Mobile specific styling */
+header {
+    width: 100%;
+    text-align: center;
+    height: var(--header-height);
+    margin: var(--header-margin-top) 0rem var(--header-margin-bottom) 0rem;
+}
+
+main {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.toolContainer {
+    border: 1px solid black;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 1rem auto;
+}
+
+.tool * {
+    border: 1px solid blue;
+    margin: 0.125rem auto;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: var(--footer-font-size);
+}
+
