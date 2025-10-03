@@ -19,3 +19,5 @@ The boiler-plate for how the tools should be displayed on the landing page shoul
         </button>
     </div>
 </div>
+
+I successfully integrated my old rollr web-app into this one, I need to include a back button that will close out the current window when clicked. I don't know if I can do that, but it needs a back button that actually leads back to the home page. Then, maybe some better styling for cohesion. 
