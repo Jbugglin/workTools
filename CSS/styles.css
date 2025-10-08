@@ -58,8 +58,6 @@ header button {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: var(--footer-font-size);
@@ -87,4 +85,29 @@ footer {
     height: 44px;
     border-radius: 50%;
 }
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: 0.25rem auto;
+    padding: 0.25rem;
+    border: 1px solid black;
+}
+
+.buttonContainer button {
+    margin: 0rem 0.25rem;
+}
+
+
 
