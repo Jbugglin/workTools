@@ -20,4 +20,26 @@ The boiler-plate for how the tools should be displayed on the landing page shoul
     </div>
 </div>
 
-I successfully integrated my old rollr web-app into this one, I need to include a back button that will close out the current window when clicked. I don't know if I can do that, but it needs a back button that actually leads back to the home page. Then, maybe some better styling for cohesion. 
+I successfully integrated my old rollr web-app into this one, I need to include a back button that will close out the current window when clicked. I don't know if I can do that, but it needs a back button that actually leads back to the home page. Then, maybe some better styling for cohesion - possibly integrate the styling into 1 single style sheet. 
+
+
+10/8/2025
+
+Today I want to try to build up a basic todo app with localStorage for saved data. 
+
+The basic todo app should be able to:
+    - Create a task
+    - Read the task
+    - Update the task
+    - Delete the task...
+        or
+    - Add task
+    - Edit task
+    - Delete task
+    - Mark tasks as complete 
+
+ul element empty
+li elements will contain:
+    - radio button to mark task as complete
+    - span element to display task
+    - edit and delete button 
