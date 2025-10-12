@@ -7,11 +7,10 @@
     --tool-button-bg: hsl(112, 87%, 35%);
     --off-white-bg: hsl(45, 29%, 97%);
     --white: hsl(0, 0%, 100%);
+    --input-bg: hsl(112, 85%, 95%);
 
     /* Spacing variables */
-    --header-margin-top: 2rem;
-    --header-margin-bottom: 3rem;
-    --header-height: 1rem;
+    --header-height: 50px;
 
     --tool-margin: 1rem;
     
@@ -22,9 +21,10 @@
 /* Mobile specific styling */
 header {
     width: 100%;
-    text-align: center;
     height: var(--header-height);
-    margin: var(--header-margin-top) 0rem var(--header-margin-bottom) 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -49,65 +49,79 @@ main {
     text-align: center;
 }
 
-.tool button,
-header button {
-    background-color: var(--tool-button-bg);
-    color: var(--white);
-    padding: 1rem 2rem;
-    border-radius: 1.625rem;
-}
-
 footer {
     width: 100%;
     text-align: center;
     font-size: var(--footer-font-size);
 }
 
+
+
 /* Finish line estimator styling */
-
-/* Todo styling */
-.search-box {
-    border: 1px solid blue;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.estContainer {
+    margin: 0rem auto;
 }
 
-.search-box input {
-    border: 1px solid blue;
-}
-
-.add-btn {
-    border: 1px solid blue;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-}
-
-ul {
-    width: 100%;
+#user-input {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    margin: 1rem 0rem 0rem;
+}
+
+.user-input-field {
+    width: 275px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userInputArea {
+    border: 1px solid var(--tool-button-bg);
+    background-color: var(--input-bg);
+    width: 100px;
+    padding: 0rem 0.125rem;
+}
+
+button {
+    background-color: var(--tool-button-bg);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+}
+
+#user-input button:hover {
+    cursor: pointer;
+}
+
+#output{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    border: 2px solid black;
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+.runTime {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    margin: 0.25rem auto;
-    padding: 0.25rem;
-    border: 1px solid black;
+.left-column {
+    width: 50%;
 }
 
-.buttonContainer button {
-    margin: 0rem 0.25rem;
+.right-column {
+    width: 50%;
 }
 
+#totalRuntime {
+    border-top: 1px solid black;
+}
 
-
+#calcTotalRun {
+    border-top: 1px solid black;
+}

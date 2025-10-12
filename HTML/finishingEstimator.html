@@ -14,84 +14,91 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="estContainer">
             <form id="user-input">
                 <!-- Will convert this to a drop-down selection -->
                 <div class="user-input-field">
                     <label for="totalReadyRolls">Total Rolls Ready:</label>
-                    <input type="number" name="totalReadyRolls" id="totalReadyRolls" min="0">
+                    <input type="number" name="totalReadyRolls" id="totalReadyRolls" min="0" class="userInputArea">
                 </div>
                 <br>
                 <div class="user-input-field">
                     <label for="seqStart">Starting Sequence #:</label>
-                    <input type="number" name="seqStart" id="seqStart" min="0">
+                    <input type="number" name="seqStart" id="seqStart" min="0" class="userInputArea">
                 </div>
                 <br>
                 <div class="user-input-field">
                     <label for="seqEnd">Ending Sequence #:</label>
-                    <input type="number" name="seqEnd" id="seqEnd" min="0">
+                    <input type="number" name="seqEnd" id="seqEnd" min="0" class="userInputArea">
                 </div>
                 <br>
                 <div class="user-input-field">
                     <label for="prodVelo"># of Sheets / hr:</label>
-                    <input type="number" name="prodVelo" id="prodVelo" min="0">
+                    <input type="number" name="prodVelo" id="prodVelo" min="0" class="userInputArea">
                 </div>
                 <br>
                 <!-- Will convert this to a drop-down selection -->
                 <div class="user-input-field">
                     <label for="numOfGaps"># of Gaps in ready rolls: </label>
-                    <input type="number" name="numOfGaps" id="numOfGaps">
+                    <input type="number" name="numOfGaps" id="numOfGaps" class="userInputArea">
                 </div>
                 <br>
-                <button type="submit">Submit</button>
-                <button type="reset">Clear</button>
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </div>
             </form>
 
             <div id="output">
-                <div id="totalQtyContainer">
-                    <span>Total Quantity: </span>
-                    <div id="quantity">-------</div>
+                <div class="left-column">
+                    <ul class="timeDiv">
+                        <li>Total Quantity: </li>
+                        <li>Production Run Time:</li>
+                        <li>Total Roll Change Time: </li>
+                        <li>Time To Run Gaps:</li>
+                        <li id="totalRuntime"><strong>Total Runtime:</strong></li>
+                    </ul>
                 </div>
 
-                <div id="quantityRunTime">
-                    <span>Production Run Time: </span>
-                    <div class="runTime">
-                        <div id="prodHours">Hours</div>
-                        <div class="colon">:</div>
-                        <div id="prodMinutes">Minutes</div>
-                    </div>
-                </div>
-
-                <div id="rollChangeTime">
-                    <span>Total Roll Change Time: </span>
-                    <div class="runTime">
-                        <div id="rollChangeHours">Hours</div>
-                        <div class="colon">:</div>
-                        <div id="rollChangeMinutes">Minutes</div>
-                    </div>
-                </div>
-
-                <div id="rollGapTime">
-                    <span>Time To Run Gaps: </span>
-                    <div class="runTime">
-                        <div id="gapHours">Hours</div>
-                        <div class="colon">:</div>
-                        <div id="gapMinutes">Minutes</div>
-                    </div>
-                </div>
-
-                <div id="totalRunTime">
-                    <span>Total Runtime: </span>
-                    <div class="runTime">
-                        <div id="totalHours">Hours</div>
-                        <div class="colon">:</div>
-                        <div id="totalMinutes">Minutes</div>
-                    </div>
+                <div class="right-column">
+                    <ul>
+                        <li>
+                            <div id="quantity">-------</div>
+                        </li>
+                        <li>
+                            <div class="runTime">
+                                <div id="prodHours">HH</div>
+                                <div class="colon">:</div>
+                                <div id="prodMinutes">MM</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="runTime">
+                                <div id="rollChangeHours">HH</div>
+                                <div class="colon">:</div>
+                                <div id="rollChangeMinutes">MM</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="runTime">
+                                <div id="gapHours">HH</div>
+                                <div class="colon">:</div>
+                                <div id="gapMinutes">MM</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="runTime" id="calcTotalRun">
+                                <div id="totalHours"><strong>HH</strong></div>
+                                <div class="colon"><strong>:</strong></div>
+                                <div id="totalMinutes"><strong>MM</strong></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </main>
+
     <footer>
         <p id="copyrightLine">
             &copy; 2025 Jordan Bugglin. All rights reserved.

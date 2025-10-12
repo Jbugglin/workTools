@@ -43,3 +43,44 @@ li elements will contain:
     - radio button to mark task as complete
     - span element to display task
     - edit and delete button 
+
+
+10/12/2025
+
+I am migrating all of the styles and refactoring some of the classes and id's. This should help with keeping styles separate and in 1 file, 1 call as opposed to multiples. 
+
+The main tags for the finish line estimator are as of follows:
+main
+    .estContainer
+        #user-input
+            .user-input-field 
+                label 
+                #totalReadyRolls
+                #seqStart
+                #seqEnd
+                #prodVelo
+                #numOfGaps
+            button
+            
+        #output
+            #totalQtyContainer
+                span
+                #quantity
+
+        #quantityRunTime
+            span
+            .runTime
+                #prodHours
+                .colon
+                #prodMinutes
+        
+        #totalRunTime
+            span
+            .runTime
+                #totalHours
+                .colon
+                #totalMinutes
+
+        footer
+            #copyrightLine
+/main 

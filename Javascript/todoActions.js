@@ -20,7 +20,9 @@ taskBtn.addEventListener("click", function () {
 
 function addTask(newTask) {
     let task = document.createElement('li')
-    task.innerHTML = newTask
+    const taskDisplay = document.createElement('span')
+    taskDisplay.innerHTML = newTask
+    task.appendChild(taskDisplay)
 
     // Create and append an Edit and Delete button on the 
     // Li elements. Then append the Li element to the Ul.
@@ -40,10 +42,20 @@ function addTask(newTask) {
     task.appendChild(buttonContainer)
     //append the li element to the ul element.
     ulElement.appendChild(task)
-    
+
+    //Checks the li element to see if contentEditable = true, if so, allows you to edit the task on click.
+    editBtn.addEventListener("click", function() {
+        taskDisplay.contentEditable = true
+    })
+
+    //Deletes the selected task from the ul element.
     deleteBtn.addEventListener("click", function() {
         let deleteTask = document.querySelector("li")
         deleteTask.remove(task)
     })
     
 }
+
+// I need to figure out why it deletes the first created task instead of the task that was selected for deletion. Might have to create unique id's for the tasks as created. 
+
+//I also need to add in a complete radio button, and figure out how to "exit" editing. 
