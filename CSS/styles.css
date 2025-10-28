@@ -104,7 +104,7 @@ button {
     margin: 2rem 0rem;
 }
 
-.runTime {
+.runTime, .completionTime {
     display: flex;
     justify-content: center;
     align-items: center;

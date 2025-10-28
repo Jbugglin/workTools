@@ -84,3 +84,25 @@ main
         footer
             #copyrightLine
 /main 
+
+
+
+10/28/2025
+
+I have a few new ideas to add:
+
+Finishing estimator:
+    -Add estimated completion time...and display.
+    -User input # of rolls
+    -Start/stop buttons
+    -Display elapsed time
+    -Calculates split time against 20 min est time. 
+    -Result will change displayed completion time.
+
+Add estimated completion time: 
+    completion time = (Time as of submit clicked) + (total runtime)
+
+Tool:
+    -Suggested machine speed calculator...
+        -total pieces for job / estimated run time. (2 user inputs)
+

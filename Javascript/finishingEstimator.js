@@ -22,21 +22,52 @@ let totalTime = 0;
 let totalHours = 0;
 let totalMinutes = 0;
 
+let completedHours = 0;
+let completedMin = 0;
+
 let numberFormatter = new Intl.NumberFormat('en-US', {
     minimumIntegerDigits: 2, useGrouping: false
 });
+
+function formatTime(number){
+    return number < 10 ? '0' + number : number;
+}
+
+/**
+ *  Calculate estimated completion time.
+ *      completionTime = (current time) + (est total runtime)
+ */
+function calcCompletionTime(){
+    let currentTime = Date.now() //Returns current date in ms
+    // There is 3600000 ms in 1 hour. 
+    // There is 60000 ms in 1 minute. 
+    // Define how much time to add - convert runtime to ms.
+    let convRunTimeHours = totalHours * 3600000;
+    let convRunTimeMin = totalMinutes * 60000;
+
+    //Add to current time in ms....
+    let completionTime = currentTime + convRunTimeHours + convRunTimeMin;
+    //Create Date object for future time
+    let futureDate = new Date(completionTime);
+    let compHours = formatTime(futureDate.getHours());
+    let compMin = formatTime(futureDate.getMinutes());
+
+    console.log(`Completion Time: ${compHours}:${compMin}`);
+    //Now to append it to the display...
+    document.getElementById("completeHours").innerHTML = compHours;
+    document.getElementById("completeMinutes").innerHTML = compMin;
+
+}
+
+
+
 
 /**
  *  Calculate total estimated runtime. 
  *      totalRunTime = production run time + roll change time + gap run time
  */
 function calcTotalRuntime(){
-    console.log("Gaptime: " +gapTime);
-    console.log("Rolls: " +rollsReady);
-    console.log("Production: " +prodTime * 60); //Convert to minutes
-
     totalTime = rollsReady + (prodTime * 60) + gapTime;
-    console.log(totalTime); 
     if (totalTime >= 60){
         //Hours
         totalHours = Math.floor(totalTime / 60);
@@ -139,4 +170,5 @@ estimateForm.addEventListener("submit", (e) => {
     calcRollChange();
     calcGapRun();
     calcTotalRuntime();
+    calcCompletionTime()
 });
