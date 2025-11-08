@@ -59,9 +59,6 @@ function calcCompletionTime(){
 
 }
 
-
-
-
 /**
  *  Calculate total estimated runtime. 
  *      totalRunTime = production run time + roll change time + gap run time

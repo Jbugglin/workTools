@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Velo Suggest Tool</title>
+</head>
+<body>
+    <header>
+        <button class="homeButton">
+            <a href="../index.html">Home</a>
+        </button>
+    </header>
+    <main>
+        <div class="estContainer">
+            <form id="user-input">
+                <div class="user-input-field">
+                    <label for="totalPieceCount">Ticket Piece Count: </label>
+                    <input type="text" name="totalPieceCount" id="totalPieceCount" min="0" class="userInputArea">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="ticketRunTime">Runtime From Ticket: </label>
+                    <input type="text" name="ticketRunTime" id="ticketRunTime" min="0" class="userInputArea">
+                </div>
+                <br>
+                <div class="button-container">
+                    <button type="submit" id="veloSub">Submit</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+            <div id="output">
+                <div class="left-column">
+                    <ul class="veloDiv">
+                        <li>Suggested Speed: </li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <ul>
+                        <li id="velocity">-----</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p id="copyrightLine">
+            &copy; 2025 Jordan Bugglin. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="../Javascript/veloSuggest.js"></script>
+</body>
+</html>
