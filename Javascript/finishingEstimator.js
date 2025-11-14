@@ -48,14 +48,35 @@ function calcCompletionTime(){
     //Add to current time in ms....
     let completionTime = currentTime + convRunTimeHours + convRunTimeMin;
     //Create Date object for future time
-    let futureDate = new Date(completionTime);
+    const futureDate = new Date(completionTime);
+    const completedDate = futureDate.toLocaleDateString();
     let compHours = formatTime(futureDate.getHours());
     let compMin = formatTime(futureDate.getMinutes());
 
+    console.log(`Completion Date: ${completedDate}`);
     console.log(`Completion Time: ${compHours}:${compMin}`);
     //Now to append it to the display...
-    document.getElementById("completeHours").innerHTML = compHours;
-    document.getElementById("completeMinutes").innerHTML = compMin;
+    document.getElementById("completionDate").innerHTML = completedDate;
+
+    //This will display the time in a 24hr format
+    //document.getElementById("completeHours").innerHTML = compHours;
+    //document.getElementById("completeMinutes").innerHTML = compMin;
+
+    // convert 24-hour to 12-hour clock with AM/PM
+    const hour24 = compHours;
+    const ampm = hour24 >= 12 ? 'PM' : 'AM';
+    let hour12 = hour24 % 12;
+    if (hour12 === 0) hour12 = 12;
+    const compHours12 = formatTime(hour12);
+
+    // update display (use a dedicated AM/PM element if present, otherwise append to minutes)
+    document.getElementById("completeHours").innerHTML = compHours12;
+    const ampmEl = document.getElementById("completeAmPm");
+    if (ampmEl) {
+        ampmEl.innerHTML = ampm;
+    } else {
+        document.getElementById("completeMinutes").innerHTML = compMin + ' ' + ampm;
+    }
 
 }
 

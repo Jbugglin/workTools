@@ -106,3 +106,8 @@ Tool:
     -Suggested machine speed calculator...
         -total pieces for job / estimated run time. (2 user inputs)
 
+11/14/2025
+
+Today, I want to convert the completion time from the 24hr formatting to AM/PM formatting, and add the date of which it will be completed. I think this will clear up any confusion that may occur from not having the date readily available, especially if the job exceeds multiple shifts and days of run time. 
+
+I also want to condense the JS files for each tool into 1 cohesive file, less server calls, but will attempt that at a later date when I can organize the JS file more effectively.
