@@ -41,7 +41,7 @@ main {
     max-width: 300px;
     height: auto;
     margin: 1rem auto;
-    padding: 0.5rem;
+    padding: 0.125rem 0.5rem;
 }
 
 .tool * {   
@@ -50,6 +50,7 @@ main {
 }
 
 footer {
+    display: none;
     width: 100%;
     text-align: center;
     font-size: var(--footer-font-size);
