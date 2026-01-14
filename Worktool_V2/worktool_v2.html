@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./worktool_v2.css">
+    <title>Worktool_V2 - JB</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <form class="jobDetails" id="jobForm">
+            <div class="inputContainer">
+                <label for="jobNo">Job Number:</label>
+                <input type="text" name="jobNo" id="jobNo" required maxlength="6">
+            </div>
+
+            <div class="inputContainer">
+                <label for="pieceCount">Total Pieces:</label>
+                <input type="text" name="pieceCount" id="pieceCount">
+            </div>
+
+            <div class="inputContainer">
+                <label for="estRun">Estimated Runtime:</label>
+                <input type="text" name="estRun" id="estRun">
+            </div>
+
+            <div class="buttonContainer">
+                <input type="button" value="Submit" onclick="jobDetailSubmit()">
+                <input type="button" value="Clear">
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+    <script src="./worktool_v2.js"></script>
+</body>
+</html>

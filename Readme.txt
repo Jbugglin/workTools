@@ -113,3 +113,20 @@ Today, I want to convert the completion time from the 24hr formatting to AM/PM f
 11/16/2025
 
 I am wanting to figure out a better estimation tool to figure out the number of potential rolls, could help with figuring out how large a job will be and a better calculation for roll changes. I also will try and come up with an error percentage for smaller/incomplete rolls from press. starting out I feel as if 10% would be a good start and eventually will adjust for accuracy. 
+
+
+12/31/25 - 1/1/26
+
+Happy New Year, I'm adding another section into this project, where I am wanting to add a stopwatch section. Going into the new year, I'm going to refactor the entire job and try to streamline the tools added. I want to be able to have the user input the estimated runtime (not including setup), and the piece count to give the user the baseline estimated running speed as a target to hit. I'm hoping to add in a way to compare the actual running speed to the estimated and display as a percentage. 
+
+I also want to add a stopwatch component for roll changes and gap run-outs. The user will press start when beginning a roll change or gap run-out, and stop the timer once completed. The over-all tool will take this time and apply it (decrement or increment) to the current estimated time. This may be a bit lofty, but I also want to have a comparison estimated/actual and display a percentage result. I think this may help in the operation, planning and estimations for the finish line. Everything that I think of this project I am and will include without edit. I think it is important to see my thought process and how I break down / create projects.
+
+Flow:
+    -user obtains and reads job ticket
+    -user input piece count and estimated run time (not including setup time) **I need to verify if roll changes is setup or run time **
+        -This will give an estimated speed to meet that initial estimation. **I want to display this as an actual vs. estimated...in %**
+    -user input number of rolls, gaps, speed, etc. 
+    -program to display estimated run time, roll change time, gap run out time, estimated completion time. 
+    -need to have a section that will have a button to time roll changes and gap runout and adjust the respectable time variables and update the completion times. 
+
+I ultimately need to figure out how to serialize or save this information, then can add a field where user will input the job number, and on the back-end be able to have actual metrics in real time. 
