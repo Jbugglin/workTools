@@ -42,29 +42,58 @@ ul, ol {
 }
 
 /* Generic non-viewport styling */
-
 main {
     padding: 1rem;
 }
 
-form {
-    border: 1px solid black;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+fieldset {
     padding: 0.5rem;
 }
 
-.inputContainer {
+legend {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+input,
+.display,
+select,
+fieldset {
+    border: 1px solid black;
+    border-radius: 0.125rem;
+}
+
+.user-input {
     width: 100%;
-    font-size: 0.9rem;
     display: flex;
-    margin: 0.25rem 0rem;
     justify-content: space-between;
 }
 
+.user-input,
+.display {
+    margin: 0.25rem 0rem;
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 0rem 0.5rem;
+    padding: 0rem 0.75rem;
+}
 /* Mobile Styling */
 
 /* Desktop Styling - only if needed */

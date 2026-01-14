@@ -9,26 +9,53 @@
 <body>
     <header></header>
     <main>
-        <form class="jobDetails" id="jobForm">
-            <div class="inputContainer">
-                <label for="jobNo">Job Number:</label>
-                <input type="text" name="jobNo" id="jobNo" required maxlength="6">
-            </div>
+        <form class="calcVeloForm" id="calcVeloForm">
+            <fieldset>
+                <legend>Velocity</legend>
+                <div class="user-input">
+                    <label for="pieceCount">Total Pieces:</label>
+                    <input type="text" name="pieceCount" id="pieceCount">
+                </div>
+                <div class="user-input">
+                    <label for="piecePerSheet">Pieces per Sheet:</label>
+                    <select name="piecePerSheet" id="piecePerSheet">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="user-input">
+                    <label for="estRun">Est. Runtime:</label>
+                    <input type="text" name="estRun" id="estRun">
+                </div>
+                <div id="velo-disp" class="display"></div>
+                <div class="button-container">
+                    <button id="subCalcVelo">Calc!</button>
+                    <button type="reset" onclick="clearVeloDisp()">Clear</button>
+                </div>
+            </fieldset>
+        </form>
 
-            <div class="inputContainer">
-                <label for="pieceCount">Total Pieces:</label>
-                <input type="text" name="pieceCount" id="pieceCount">
-            </div>
+        <form class="roll-info" id="roll-info">
+            <fieldset>
+                <legend>Roll Information</legend>
+                <div class="user-input">
+                    <label for="numRolls"># of rolls:</label>
+                    <input type="text" name="numRolls" id="numRolls">
+                </div>
 
-            <div class="inputContainer">
-                <label for="estRun">Estimated Runtime:</label>
-                <input type="text" name="estRun" id="estRun">
-            </div>
+                <div class="user-input">
+                    <label for="rollGaps"># of gaps:</label>
+                    <input type="text" name="rollGaps" id="rollGaps">
+                </div>
 
-            <div class="buttonContainer">
-                <input type="button" value="Submit" onclick="jobDetailSubmit()">
-                <input type="button" value="Clear">
-            </div>
+                <div id="roll-disp" class="display"></div>
+
+                <div class="button-container">
+                    <button id="rollBtn">Calc!</button>
+                    <button type="reset" onclick="clearVeloDisp()">Clear</button>
+                </div>
+            </fieldset>
         </form>
     </main>
     <footer></footer>
