@@ -14,10 +14,19 @@
     </header>
     <main>
         <div class="estContainer">
-            <form id="user-input">
+            <form id="velo-input">
                 <div class="user-input-field">
                     <label for="totalPieceCount">Ticket Piece Count: </label>
                     <input type="text" name="totalPieceCount" id="totalPieceCount" min="0" class="userInputArea">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="pcPerSht"># per sheet: </label>
+                    <select name="pcPerSht" id="pcPerSht">
+                        <option value="1">1</option>
+                        <option value="2" selected="selected">2</option>
+                        <option value="3">3</option>
+                    </select>
                 </div>
                 <br>
                 <div class="user-input-field">
@@ -51,6 +60,6 @@
         </p>
     </footer>
 
-    <script src="../Javascript/veloSuggest.js"></script>
+    <script src="/action.js"></script>
 </body>
 </html>

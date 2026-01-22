@@ -17,7 +17,7 @@
         <!-- User input to find the quantity for a full roll, 
             this includes the starting squence number and ending sequence number for the roll on 1 side.
                 This number will be the number of SHEETS! -->
-        <form id="user-input">
+        <form id="rollEst-input">
             <div class="user-input-field">
                 <label for="rollSeqStart">Starting Sequence #:</label>
                 <input type="number" name="rollSeqStart" id="rollSeqStart" min="0" class="userInputArea">
@@ -29,12 +29,12 @@
             </div>
             <br>
             <div class="button-container">
-                <button type="submit">Submit</button>
+                <button type="submit" onclick="rollEst()">Submit</button>
                 <button type="reset">Clear</button>
             </div>
         </form>
     </main>
     
-    <script src="../Javascript/rollEst.js"></script>
+    <script src="/action.js"></script>
 </body>
 </html>
