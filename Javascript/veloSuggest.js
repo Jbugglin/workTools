@@ -5,10 +5,17 @@ let ticketPieceValue = 0;
 let ticketRunTime = document.getElementById('ticketRunTime');
 let ticketRunValue = 0;
 
+let pcPerSheet = document.getElementById('pcPerSht');
+let pcPerSheetValue = 0;
+
 let calculatedVelo = 0.00;
 
 function calcVelo(){
-    calculatedVelo = Math.round((ticketPieceValue / 2) / ticketRunValue);
+    calculatedVelo = Math.round((ticketPieceValue / pcPerSheetValue) / ticketRunValue);
+}
+
+function getPcPerSheetCount() {
+    pcPerSheetValue = pcPerSheet.value;
 }
 
 function getTicketRunTime() {
@@ -24,11 +31,12 @@ function displayResult() {
     document.getElementById("velocity").innerHTML = calculatedVelo+ " shts / hr";
 }
 
-let veloForm = document.getElementById('user-input');
+let veloForm = document.getElementById('velo-input');
 veloForm.addEventListener("submit",(e) =>{
     e.preventDefault();
     getTicketPieceCount();
     getTicketRunTime();
+    getPcPerSheetCount();
     calcVelo();
     displayResult();
 });

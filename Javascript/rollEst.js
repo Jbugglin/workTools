@@ -14,7 +14,7 @@ function getSeqStartValue() {
 /**
  *  Main driver, also handles the submit button clicked. 
  */
-let estimateForm = document.getElementById('user-input');
+let estimateForm = document.getElementById('rollEst-input');
 estimateForm.addEventListener("submit", (e) => {
     e.preventDefault();
     getSeqStartValue();
