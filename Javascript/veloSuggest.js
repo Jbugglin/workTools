@@ -28,7 +28,7 @@ function getTicketPieceCount() {
 
 function displayResult() {
     //console.log("Piece count: " +ticketPieceValue+ " , Runtime: " +ticketRunValue);
-    document.getElementById("velocity").innerHTML = calculatedVelo+ " shts / hr";
+    document.getElementById("velocity").innerHTML = calculatedVelo.toLocaleString("en-US")+ " shts / hr";
 }
 
 let veloForm = document.getElementById('velo-input');

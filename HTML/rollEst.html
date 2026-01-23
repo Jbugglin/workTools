@@ -17,22 +17,52 @@
         <!-- User input to find the quantity for a full roll, 
             this includes the starting squence number and ending sequence number for the roll on 1 side.
                 This number will be the number of SHEETS! -->
-        <form id="rollEst-input">
-            <div class="user-input-field">
-                <label for="rollSeqStart">Starting Sequence #:</label>
-                <input type="number" name="rollSeqStart" id="rollSeqStart" min="0" class="userInputArea">
+        <div class="estContainer">
+            <form id="rollEst-input" class="user-input">
+                <div class="user-input-field">
+                    <label for="rollSeqStart">Starting Sequence #:</label>
+                    <input type="number" name="rollSeqStart" id="rollSeqStart" min="0" class="userInputArea">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="rollSeqEnd">Ending Sequence #:</label>
+                    <input type="number" name="rollSeqEnd" id="rollSeqEnd" min="0" class="userInputArea">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="totalJobQty">Total Job Quantity:</label>
+                    <input type="number" name="totalJobQty" id="totalJobQty" min="0" class="userInputArea">
+                </div>
+                <br>
+                <div class="user-input-field">
+                    <label for="numPerSheet"># per sheet: </label>
+                    <select name="numPerSheet" id="numPerSheet">
+                        <option value="1">1</option>
+                        <option value="2" selected="selected">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <br>
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+            <div id="output">
+                <div class="left-column">
+                    <ul class="veloDiv">
+                        <li>Total Rolls: </li>
+                        <li>Tolerance: </li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <ul>
+                        <li id="dispRollCount">-----</li>
+                        <li id="dispTolerance">-----</li>
+                    </ul>
+                </div>
             </div>
-            <br>
-            <div class="user-input-field">
-                <label for="rollSeqEnd">Ending Sequence #:</label>
-                <input type="number" name="rollSeqEnd" id="rollSeqEnd" min="0" class="userInputArea">
-            </div>
-            <br>
-            <div class="button-container">
-                <button type="submit" onclick="rollEst()">Submit</button>
-                <button type="reset">Clear</button>
-            </div>
-        </form>
+        </div>
     </main>
     
     <script src="../Javascript/rollEst.js"></script>
