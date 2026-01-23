@@ -53,8 +53,8 @@ function calcCompletionTime(){
     let compHours = formatTime(futureDate.getHours());
     let compMin = formatTime(futureDate.getMinutes());
 
-    console.log(`Completion Date: ${completedDate}`);
-    console.log(`Completion Time: ${compHours}:${compMin}`);
+    //console.log(`Completion Date: ${completedDate}`);
+    //console.log(`Completion Time: ${compHours}:${compMin}`);
     //Now to append it to the display...
     document.getElementById("completionDate").innerHTML = completedDate;
 
@@ -180,7 +180,7 @@ function seqInputError(){
 /**
  *  Main driver, also handles the submit button clicked. 
  */
-let estimateForm = document.getElementById('user-input');
+let estimateForm = document.getElementById('finishLine-input');
 estimateForm.addEventListener("submit", (e) => {
     e.preventDefault();
     calcTotalQty();
