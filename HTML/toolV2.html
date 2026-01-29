@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styleV2.css">
+    <title>Work Tool V2 - JB</title>
+</head>
+<body>
+    <header>
+        <button>
+            <a href="../index.html">Original HomePage</a>
+        </button>
+    </header>
+    <main>
+        <form action="" id="veloCalc">
+            <fieldset id="veloEstimate">
+                <legend>Estimated Velocity</legend>
+                <label for="jobTotalQty">Total Quantity:</label>
+                <input type="text" name="jobTotalQty" id="jobTotalQty" />
+                <br>
+                <label for="numPerSheet"># per Sheet:</label>
+                <select name="numPerSheet" id="numPerSheet">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                </select>
+                <br>
+                <label for="jobRunTime">Total Run Time:</label>
+                <input type="text" name="jobRunTime" id="jobRunTime" />
+                <br>
+                <label for="veloDisplay">Estimated Velocity:</label>
+                <div id="veloDisplay"></div>
+                <br>
+                <div class="button-Container" id="veloBtnContainer">
+                    <button type="submit" id="veloSubmitBtn">Calc!</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </fieldset>
+        </form>
+        <form action="" id="finishing">
+            <fieldset id="finishingCalc">
+                <legend>Finish Line Information</legend>
+                <label for="highSeqNum">Sequence # (High):</label>
+                <input type="text" name="highSeqNum" id="highSeqNum" />
+                <br>
+                <label for="lowSeqNum">Sequence # (Low):</label>
+                <input type="text" name="lowSeqNum" id="lowSeqNum" />
+                <br>
+                <label for="numOfRolls"># of Rolls:</label>
+                <input type="text" name="numOfRolls" id="numOfRolls" />
+                <br>
+                <label for="numOfGaps"># of Gaps:</label>
+                <input type="text" name="numOfGaps" id="numOfGaps" />
+                <br>
+                <label for="actVelo">Velocity (sheets/hr):</label>
+                <input type="text" name="actVelo" id="actVelo" />
+                <br>
+                <div class="button-Container" id="finBtnContainer">
+                    <button type="submit" id="finSubmitBtn">Calc!</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer></footer>
+    <script src="../Javascript/actionV2.js"></script>
+</body>
+</html>

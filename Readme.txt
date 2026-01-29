@@ -130,3 +130,13 @@ Flow:
     -need to have a section that will have a button to time roll changes and gap runout and adjust the respectable time variables and update the completion times. 
 
 I ultimately need to figure out how to serialize or save this information, then can add a field where user will input the job number, and on the back-end be able to have actual metrics in real time. 
+
+
+1/29/2026
+Welcome to the new year! So I'm adding a second version of this tool that will hopefully be a lighter-weight, more streamline variation. I tried to slim down the tools and use only 1 js file, but that isn't the best idea due to me wanting to utilize forms on different pages. This lead me to not being able to fully utilize global variables. This one, I plan on laying everything out on 1 html page, 1 js file. I want to be able to hide all of the inputs when submitted and only display the metrics that matter. I also want to add a section to the displayed metrics that have an estimated v. actual in percent, estimated time to run at given user-input velocity v. estimated run time, completion date, calculate the total number of shifts to completion, and display how many rolls estimated v actual to be able to run per shift.
+
+I'm still going by the estimations of 20 min per roll change and 5 min per gap runout. 
+
+Time to get started, I have to research if having multiple forms with submit buttons can be a thing. 
+
+I also want to add an export option to csv...I feel that could have some pros...we'll see. 

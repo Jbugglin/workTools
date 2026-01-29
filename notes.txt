@@ -1,0 +1,21 @@
+Velo-suggest (user-input: runtime & piece count from ticket, # per sheet)
+    Suggested velocity = (Total piece count / total number out per sheet) / runtime in hours
+
+
+Finishing Calculations (user inputs: # of rolls ready, # of gaps, sequence range, actual velocity)
+    Estimated Calculations:
+        estProdRuntime = (highest seq # - lowest seq #) / (suggested velo / # per sheet)
+        est gap runtime = # of gaps * 5 minutes (HH:MM format)
+        est roll change = # of rolls* 20 minutes (HH:MM format)
+        total estTime = est runtime + est gap + est roll change (HH:MM)
+        est rolls per shift = estRunTime / 6 hours <<<ESTIMATED.
+
+    Actual Calculations:
+        actProdruntime = (highSeqNum - lowSeqNum) / (actVelo / numPerSheet)
+        gap runtime & roll change <<< add a stopwatch & adjust overall 
+        totalActTime = actProdruntime + actGap + actRoll (HH:MM format)
+        actRollPerShift = totalActTime / 6 <<<ESTIMATED...will adjust
+
+    Estimated v Actual Calculations <<<The spotlight...
+        prodPercentage = if (estProd > actProd){(actProd/estProd)*100 style="color:red"}else{(estProd/actProd)*100 style="color:green"} <<<Same formula calculating everything else. 
+
